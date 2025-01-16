@@ -7,9 +7,10 @@ interface ButtonProps {
   text: string;
   bg: "fill" | "outline";
   icon: React.ReactNode;
+  onPress?: () => void;
 }
 
-const CustomButton = ({ bg, style, text, icon }: ButtonProps) => {
+const CustomButton = ({ bg, style, text, icon, onPress }: ButtonProps) => {
   const backgroundColor =
     bg === "fill"
       ? GlobalStyles.colors.primaryRed
@@ -27,6 +28,7 @@ const CustomButton = ({ bg, style, text, icon }: ButtonProps) => {
 
   return (
     <Pressable
+      onPress={onPress}
       style={[
         styles.container,
         { backgroundColor, borderColor: borderColor },
