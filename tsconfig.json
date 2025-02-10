@@ -1,13 +1,18 @@
 {
   "compilerOptions": {
-    "jsx": "react"
+    "strict": true,
+    "jsx": "react",
+    "moduleResolution": "node",
+    "baseUrl": ".",
+    "paths": {
+      "@env": ["env.d.ts"]
+    }
   },
-  "extends": "expo/tsconfig.base"
+  "extends": "expo/tsconfig.base",
+  "include": ["env.d.ts", "src/**/*"]
 }
 
 // {
 //   "compilerOptions": {},
-//   "include": ["src/**/*"],
 //   "extends": "expo/tsconfig.base"
 // }
-   

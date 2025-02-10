@@ -35,7 +35,7 @@
       ]
     ],
     "extra": {
-      "GOOGLE_API_KEY": "AIzaSyCbZI9huHHxr-xkTFIRGhqXouxgg_IgcqU",
+      "GOOGLE_API_KEY": "",
       "BASE_URL": "https://your-api-url.com"
     }
   }
