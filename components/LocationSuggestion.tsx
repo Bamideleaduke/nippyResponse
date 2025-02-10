@@ -3,12 +3,24 @@ import { Pressable, View, StyleSheet, Text } from "react-native";
 import Entypo from "@expo/vector-icons/Entypo";
 import FontAwesome from "@expo/vector-icons/FontAwesome";
 import { GlobalStyles } from "../constant/Styles";
+import { useNavigation } from "@react-navigation/native";
+import { MapScreenNavigationProp } from "../constant/types";
 
 interface LocationSuggestionProps {
   text: string;
+  location: any;
 }
 
-const LocationSuggestion = ({ text }: LocationSuggestionProps) => {
+const LocationSuggestion = ({ text, location }: LocationSuggestionProps) => {
+  const navigation = useNavigation<MapScreenNavigationProp>();
+
+  const handleGetLocation = () => {
+    navigation.navigate("map", {
+      lat: location.lat,
+      lng: location.lng,
+    });
+  };
+
   return (
     <Pressable style={styles.container}>
       <View>
@@ -22,7 +34,7 @@ const LocationSuggestion = ({ text }: LocationSuggestionProps) => {
                 color={GlobalStyles.colors.textGrey}
               />
             </Pressable>
-            <Pressable>
+            <Pressable onPress={handleGetLocation}>
               <Entypo
                 name="location-pin"
                 size={24}

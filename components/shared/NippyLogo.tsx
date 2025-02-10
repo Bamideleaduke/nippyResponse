@@ -11,7 +11,7 @@ const NippyLogo = () => {
           Nippy <Text style={styles.logoText}>Response</Text>
         </Text> */}
         <Image
-          source={require("../../assets/images/nippy-response-logo.svg")}
+          source={require("../../assets/images/modNippyLogo.png")}
           style={styles.image}
         />
         <View>

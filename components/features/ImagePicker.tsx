@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { View, StyleSheet, Image, Text, Alert } from "react-native";
+import { View, StyleSheet, Alert } from "react-native";
 import * as Picker from "expo-image-picker";
 import {
   launchCameraAsync,
@@ -48,7 +48,6 @@ const ImagePicker = () => {
       aspect: [16, 9],
       quality: 0.5,
     });
-    console.log("image", image);
     setSelectedImage(image.assets[0].uri);
   };
 
@@ -63,17 +62,16 @@ const ImagePicker = () => {
       aspect: [16, 9],
       quality: 0.5,
     });
-    console.log("image", image);
     setSelectedImage(image.assets[0].uri);
   };
 
-  let imagePreview = <Text>No image taken yet</Text>;
+  // let imagePreview = <Text>No image taken yet</Text>;
 
-  if (selectedImage) {
-    imagePreview = (
-      <Image style={styles.image} source={{ uri: selectedImage }} />
-    );
-  }
+  // if (selectedImage) {
+  //   imagePreview = (
+  //     <Image style={styles.image} source={{ uri: selectedImage }} />
+  //   );
+  // }
   return (
     <View>
       {/* <View style={styles.imagePreview}>{imagePreview}</View> */}

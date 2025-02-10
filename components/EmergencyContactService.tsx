@@ -19,7 +19,7 @@ const EmergencyContactService = () => {
           text="Call"
           bg="fill"
         />
-        <CustomButton
+        {/* <CustomButton
           icon={
             <MaterialIcons
               name="message"
@@ -29,7 +29,7 @@ const EmergencyContactService = () => {
           }
           text="Send SOS Alert"
           bg="outline"
-        />
+        /> */}
         <CustomButton
           icon={
             <MaterialIcons
@@ -64,11 +64,11 @@ const EmergencyContactService = () => {
           text="Share real-time location / 5mins"
           bg="outline"
         />
-        <CustomButton
+        {/* <CustomButton
           icon={null}
           text="ICE (Number to auto-dial in case of Emergency)"
           bg="outline"
-        />
+        /> */}
       </View>
     </View>
   );

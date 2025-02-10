@@ -1,22 +1,33 @@
 import React from "react";
 import { View, Image, StyleSheet, Text, ScrollView } from "react-native";
-import { GlobalStyles } from "../constant/Styles";
 
 const serviceData = [
   {
     id: "01",
-    icon: require("../assets/services/accident.svg"),
-    title: "Accident",
+    icon: require("../assets/services/ambulance.png"),
+    title: "Ambulance",
   },
-  { id: "02", icon: require("../assets/services/fire.svg"), title: "Fire" },
+  {
+    id: "02",
+    icon: require("../assets/services/fireService.png"),
+    title: "Fire",
+  },
   {
     id: "03",
-    icon: require("../assets/services/medical.svg"),
+    icon: require("../assets/services/health.png"),
     title: "Medical",
   },
-  { id: "04", icon: require("../assets/services/crime.svg"), title: "Crime" },
-  { id: "05", icon: require("../assets/services/rape.svg"), title: "Rape" },
-  { id: "06", icon: require("../assets/services/flood.svg"), title: "Flood" },
+  {
+    id: "04",
+    icon: require("../assets/services/security.png"),
+    title: "Security",
+  },
+  {
+    id: "05",
+    icon: require("../assets/services/psycology.png"),
+    title: "psychology",
+  },
+  // { id: "06", icon: require("../assets/services/flood.svg"), title: "Flood" },
 ];
 
 const ServicesSlide = () => {
@@ -28,9 +39,11 @@ const ServicesSlide = () => {
         contentContainerStyle={{ gap: 16, marginHorizontal: 10 }}
       >
         {serviceData.map((data) => {
+          const Icon = data.icon;
           return (
             <View key={data.id} style={styles.itemContainer}>
               <View style={[styles.logoContainer]}>
+                {/* <Icon width={55} height={50} /> */}
                 <Image source={data.icon} style={styles.image} />
               </View>
               <Text style={styles.logoText}>{data.title}</Text>
@@ -54,12 +67,12 @@ const styles = StyleSheet.create({
     alignItems: "center",
   },
   logoContainer: {
-    flexDirection: "row",
-    justifyContent: "center",
-    alignItems: "center",
-    backgroundColor: GlobalStyles.colors.powderBlue,
-    width: 55,
-    height: 50,
+    // flexDirection: "row",
+    // justifyContent: "center",
+    // alignItems: "center",
+    // backgroundColor: GlobalStyles.colors.powderBlue,
+    // width: 55,
+    // height: 50,
     borderRadius: 8,
   },
   logoText: {
@@ -68,8 +81,8 @@ const styles = StyleSheet.create({
     marginTop: 8,
   },
   image: {
-    // width: 20,
-    height: 20,
+    width: 55,
+    height: 50,
   },
 });
 

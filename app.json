@@ -7,6 +7,7 @@
     "icon": "./assets/icon.png",
     "userInterfaceStyle": "light",
     "newArchEnabled": true,
+    "platforms": ["ios", "android", "web"],
     "splash": {
       "image": "./assets/splash-icon.png",
       "resizeMode": "contain",
@@ -32,6 +33,10 @@
           "photosPermissions": "The app accesses your photos to let you share them with your friends."
         }
       ]
-    ]
+    ],
+    "extra": {
+      "GOOGLE_API_KEY": "AIzaSyCbZI9huHHxr-xkTFIRGhqXouxgg_IgcqU",
+      "BASE_URL": "https://your-api-url.com"
+    }
   }
 }
